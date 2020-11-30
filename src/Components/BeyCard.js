@@ -1,13 +1,13 @@
 import React from "react";
 
 const BeyCard = (props) => {
-
-  let {bey} = props
+  // console.log(props)
+  let {bey, clickHandler} = props
 
   const imgClickHandler = () => {
-    console.log("clicked", props)
+    // console.log("clicked")
+    clickHandler(bey.id)
   }
-
   return (
     <div className="card">
       <img alt="bey" src={bey.img} onClick={imgClickHandler}/>
